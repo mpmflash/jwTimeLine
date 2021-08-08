@@ -27,6 +27,11 @@ public class FirstWindow extends JFrame{
 	private JTextField tFTeam1;
 	private JButton bAnyadirTeam1;
 	
+	//pTeam2 - Objetos
+	private ArrayList <JTextField> lstTeam2;
+	private JTextField tFTeam2;
+	private JButton bAnyadirTeam2;
+	
 	// Variables de control:
 	private int turno;
 	
@@ -46,6 +51,7 @@ public class FirstWindow extends JFrame{
 		setEquipo1();
 		pFondoIntro.add(pTeam1, BorderLayout.WEST);
 		setEquipo2();
+		pFondoIntro.add(pTeam2, BorderLayout.EAST);
 		
 	}
 	
@@ -94,6 +100,44 @@ public class FirstWindow extends JFrame{
 	}
 	
 	private void setEquipo2() {
+		pTeam2 = new JPanel();
+		GridBagLayout gBL_pTeam2 = new GridBagLayout();
 		
+		
+		pTeam1.setLayout(gBL_pTeam2);
+		
+		JLabel lblNameTeam2 = new JLabel("Equipo 2");
+		lblNameTeam2.setHorizontalAlignment(JLabel.CENTER);
+		GridBagConstraints gBC_lblNameTeam2 = new GridBagConstraints();
+		// Aquí definiremos las normas (constraints) para el elemento lblNameTeam1
+		gBC_lblNameTeam2.fill= GridBagConstraints.BOTH; // Con esto haremos que se rellene el hueco que deja el objeto al no rellenarlo por completo
+		gBC_lblNameTeam2.weightx = 1.0; // Se redimensionan las columnas y se mantiene su relación original
+		gBC_lblNameTeam2.gridwidth = GridBagConstraints.REMAINDER; // Con esto hacemos que solo un elemento ocupe la línea
+		
+		JLabel lblPersonaT2 = new JLabel("Nombre: ");
+		tFTeam2 = new JTextField();
+		tFTeam2.setColumns(10);
+		bAnyadirTeam2 = new JButton("Añadir");
+		bAnyadirTeam2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO 
+				// MÉTODO QUE AGREGA EL NOMBRE DEL USUARIO A UNA ARRAYLIST DE MIEMBROS DEL EQUIPO
+				// ADEMÁS, CREAREMOS JLABEL Y MOSTRAREMOS TODOS LOS NOMBRES AGREGADOS DEL EQUIPO
+			}
+		});
+		
+		gBL_pTeam2.setConstraints(lblNameTeam2, gBC_lblNameTeam2);
+		pTeam2.add(lblNameTeam2);
+		
+		pTeam2.add(lblPersonaT2);
+		pTeam2.add(tFTeam2);
+		
+		GridBagConstraints gBC_bAnyadir = new GridBagConstraints();
+		gBC_bAnyadir.gridy = 2;
+		gBC_bAnyadir.fill= GridBagConstraints.HORIZONTAL;
+		gBC_bAnyadir.gridwidth = 2;
+		gBL_pTeam2.setConstraints(bAnyadirTeam2, gBC_bAnyadir);
+		pTeam2.add(bAnyadirTeam2);
 	}
 }
