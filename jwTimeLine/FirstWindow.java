@@ -62,6 +62,9 @@ public class FirstWindow extends JFrame{
 		GridBagLayout gBL_pTeam1 = new GridBagLayout();
 		pTeam1.setLayout(gBL_pTeam1);
 		GridBagConstraints gBC_Team1 = new GridBagConstraints();
+		gBC_Team1.gridheight = 2;
+		gBC_Team1.gridwidth = 2;
+		gBC_Team1.fill = GridBagConstraints.BOTH;
 		JLabel lblNameTeam1 = new JLabel("Equipo 1");
 		// Aquí definiremos las normas (constraints) para el elemento lblNameTeam1
 		/*
@@ -115,6 +118,8 @@ public class FirstWindow extends JFrame{
 		pTeam1.add(bAnyadirTeam1, gbc_bAnyadirTeam1);
 		
 		GridBagConstraints gbc_bEliminarTeam1 = new GridBagConstraints();
+		gbc_bEliminarTeam1.gridy = 2;
+		gbc_bEliminarTeam1.gridx = 1;
 		pTeam1.add(bEliminarTeam1, gbc_bEliminarTeam1);
 		
 	}
