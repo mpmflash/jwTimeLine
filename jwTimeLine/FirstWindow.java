@@ -27,6 +27,7 @@ public class FirstWindow extends JFrame{
 	private ArrayList <JTextField> lstTeam1;
 	private JTextField tFTeam1;
 	private JButton bAnyadirTeam1;
+	private JButton bEliminarTeam1;
 	
 	//pTeam2 - Objetos
 	private ArrayList <JTextField> lstTeam2;
@@ -87,6 +88,15 @@ public class FirstWindow extends JFrame{
 				// ADEMÁS, CREAREMOS JLABEL Y MOSTRAREMOS TODOS LOS NOMBRES AGREGADOS DEL EQUIPO
 			}
 		});
+		bEliminarTeam1 = new JButton("Eliminar");
+		bEliminarTeam1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TO-DO
+				
+			}
+		});
+		
 		gBL_pTeam1.setConstraints(lblNameTeam1, gBC_Team1);
 		pTeam1.add(lblNameTeam1);
 		
@@ -95,18 +105,17 @@ public class FirstWindow extends JFrame{
 		gbc_lblPersonaT1.gridx = 0;
 		gbc_lblPersonaT1.fill = GridBagConstraints.HORIZONTAL;
 		pTeam1.add(lblPersonaT1, gbc_lblPersonaT1);
+		
 		GridBagConstraints gbc_tFTeam1 = new GridBagConstraints();
 		gbc_tFTeam1.gridy = 1;
 		pTeam1.add(tFTeam1, gbc_tFTeam1);
 		
-		GridBagConstraints gBC_bAnyadir = new GridBagConstraints();
-		gBC_bAnyadir.gridy = 2;
-		gBC_bAnyadir.fill= GridBagConstraints.HORIZONTAL;
-		gBC_bAnyadir.gridwidth = 2;
-		gBL_pTeam1.setConstraints(bAnyadirTeam1, gBC_bAnyadir);
 		GridBagConstraints gbc_bAnyadirTeam1 = new GridBagConstraints();
 		gbc_bAnyadirTeam1.gridy = 2;
 		pTeam1.add(bAnyadirTeam1, gbc_bAnyadirTeam1);
+		
+		GridBagConstraints gbc_bEliminarTeam1 = new GridBagConstraints();
+		pTeam1.add(bEliminarTeam1, gbc_bEliminarTeam1);
 		
 	}
 	
