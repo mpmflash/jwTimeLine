@@ -28,6 +28,7 @@ public class FirstWindow extends JFrame{
 	private JTextField tFTeam1;
 	private JButton bAnyadirTeam1;
 	private JButton bEliminarTeam1;
+	private JPanel pDePrueba;
 	
 	//pTeam2 - Objetos
 	private ArrayList <JTextField> lstTeam2;
