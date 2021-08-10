@@ -61,25 +61,9 @@ public class FirstWindow extends JFrame{
 		pTeam1 = new JPanel();
 		GridBagLayout gBL_pTeam1 = new GridBagLayout();
 		pTeam1.setLayout(gBL_pTeam1);
-		GridBagConstraints gBC_Team1 = new GridBagConstraints();
-		gBC_Team1.gridheight = 2;
-		gBC_Team1.gridwidth = 2;
-		gBC_Team1.fill = GridBagConstraints.BOTH;
-		JLabel lblNameTeam1 = new JLabel("Equipo 1");
-		// Aquí definiremos las normas (constraints) para el elemento lblNameTeam1
-		/*
-		gBC_Team1.gridx = 0;
-		gBC_Team1.gridy = 0;
-		gBC_Team1.gridwidth = 3;
-		gBC_Team1.fill= GridBagConstraints.BOTH; // Con esto haremos que se rellene el hueco que deja el objeto al no rellenarlo por completo
-		gBC_Team1.weightx = 0.5; // Se redimensionan las columnas y se mantiene su relación original
-		gBC_Team1.insets = new Insets(2,2,2,2);
-		gBC_Team1.anchor = GridBagConstraints.CENTER;
-		*/
-		pTeam1.add(lblNameTeam1, gBC_Team1);
-		// Aquí definiremos las normas (constraints) para el elemento lblPersonaT1
-		JLabel lblPersonaT1 = new JLabel("Nombre: ");
 		
+		JLabel lblNameTeam1 = new JLabel("Equipo 1");
+		JLabel lblPersonaT1 = new JLabel("Nombre: ");
 		tFTeam1 = new JTextField();
 		tFTeam1.setColumns(10);
 		bAnyadirTeam1 = new JButton("Añadir");
@@ -99,25 +83,36 @@ public class FirstWindow extends JFrame{
 				
 			}
 		});
+		// Definimos las constraints de los objetos - Posicionamiento
+		GridBagConstraints gBC_Team1 = new GridBagConstraints();
+		gBC_Team1.insets = new Insets(5, 5, 5, 5);
+		gBC_Team1.gridheight = 2;
+		gBC_Team1.gridwidth = 2;
+		gBC_Team1.fill = GridBagConstraints.BOTH;
+		pTeam1.add(lblNameTeam1, gBC_Team1);
 		
 		gBL_pTeam1.setConstraints(lblNameTeam1, gBC_Team1);
 		pTeam1.add(lblNameTeam1);
 		
 		GridBagConstraints gbc_lblPersonaT1 = new GridBagConstraints();
+		gbc_lblPersonaT1.insets = new Insets(5, 5, 5, 5);
 		gbc_lblPersonaT1.gridy = 1;
 		gbc_lblPersonaT1.gridx = 0;
 		gbc_lblPersonaT1.fill = GridBagConstraints.HORIZONTAL;
 		pTeam1.add(lblPersonaT1, gbc_lblPersonaT1);
 		
 		GridBagConstraints gbc_tFTeam1 = new GridBagConstraints();
+		gbc_tFTeam1.insets = new Insets(5, 5, 5, 5);
 		gbc_tFTeam1.gridy = 1;
 		pTeam1.add(tFTeam1, gbc_tFTeam1);
 		
 		GridBagConstraints gbc_bAnyadirTeam1 = new GridBagConstraints();
+		gbc_bAnyadirTeam1.insets = new Insets(5, 5, 5, 5);
 		gbc_bAnyadirTeam1.gridy = 2;
 		pTeam1.add(bAnyadirTeam1, gbc_bAnyadirTeam1);
 		
 		GridBagConstraints gbc_bEliminarTeam1 = new GridBagConstraints();
+		gbc_bEliminarTeam1.insets = new Insets(5, 5, 5, 5);
 		gbc_bEliminarTeam1.gridy = 2;
 		gbc_bEliminarTeam1.gridx = 1;
 		pTeam1.add(bEliminarTeam1, gbc_bEliminarTeam1);
