@@ -85,14 +85,11 @@ public class FirstWindow extends JFrame{
 		});
 		// Definimos las constraints de los objetos - Posicionamiento
 		GridBagConstraints gBC_Team1 = new GridBagConstraints();
+		gBC_Team1.gridy = 0;
 		gBC_Team1.insets = new Insets(5, 5, 5, 5);
-		gBC_Team1.gridheight = 2;
 		gBC_Team1.gridwidth = 2;
 		gBC_Team1.fill = GridBagConstraints.BOTH;
 		pTeam1.add(lblNameTeam1, gBC_Team1);
-		
-		gBL_pTeam1.setConstraints(lblNameTeam1, gBC_Team1);
-		pTeam1.add(lblNameTeam1);
 		
 		GridBagConstraints gbc_lblPersonaT1 = new GridBagConstraints();
 		gbc_lblPersonaT1.insets = new Insets(5, 5, 5, 5);
