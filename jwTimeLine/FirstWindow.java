@@ -33,6 +33,7 @@ public class FirstWindow extends JFrame{
 	private ArrayList <JTextField> lstTeam2;
 	private JTextField tFTeam2;
 	private JButton bAnyadirTeam2;
+	private JButton bEliminarTeam2;
 	
 	// Variables de control:
 	private int turno;
@@ -53,7 +54,7 @@ public class FirstWindow extends JFrame{
 		setEquipo1();
 		pFondoIntro.add(pTeam1, BorderLayout.WEST);
 		setEquipo2();
-		//pFondoIntro.add(pTeam2, BorderLayout.EAST);
+		pFondoIntro.add(pTeam2, BorderLayout.EAST);
 	}
 
 	private void setEquipo1() {
@@ -117,6 +118,60 @@ public class FirstWindow extends JFrame{
 	}
 	
 	private void setEquipo2() {
+		pTeam2 = new JPanel();
+		GridBagLayout gBL_pTeam2 = new GridBagLayout();
+		pTeam2.setLayout(gBL_pTeam2);
 		
+		JLabel lblNameTeam2 = new JLabel("Equipo 2");
+		JLabel lblPersonaT2 = new JLabel("Nombre: ");
+		tFTeam2 = new JTextField();
+		tFTeam2.setColumns(10);
+		bAnyadirTeam2 = new JButton("Añadir");
+		bAnyadirTeam2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TO-DO 
+				// MÉTODO QUE AGREGA EL NOMBRE DEL USUARIO A UNA ARRAYLIST DE MIEMBROS DEL EQUIPO
+				// ADEMÁS, CREAREMOS JLABEL Y MOSTRAREMOS TODOS LOS NOMBRES AGREGADOS DEL EQUIPO
+			}
+		});
+		bEliminarTeam2 = new JButton("Eliminar");
+		bEliminarTeam2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TO-DO
+				
+			}
+		});
+		// Definimos las constraints de los objetos - Posicionamiento
+		GridBagConstraints gBC_Team2 = new GridBagConstraints();
+		gBC_Team2.gridy = 0;
+		gBC_Team2.insets = new Insets(5, 5, 5, 5);
+		gBC_Team2.gridwidth = 2;
+		gBC_Team2.fill = GridBagConstraints.BOTH;
+		pTeam2.add(lblNameTeam2, gBC_Team2);
+		
+		GridBagConstraints gbc_lblPersonaT2 = new GridBagConstraints();
+		gbc_lblPersonaT2.insets = new Insets(5, 5, 5, 5);
+		gbc_lblPersonaT2.gridy = 1;
+		gbc_lblPersonaT2.gridx = 0;
+		gbc_lblPersonaT2.fill = GridBagConstraints.HORIZONTAL;
+		pTeam2.add(lblPersonaT2, gbc_lblPersonaT2);
+		
+		GridBagConstraints gbc_tFTeam2 = new GridBagConstraints();
+		gbc_tFTeam2.insets = new Insets(5, 5, 5, 5);
+		gbc_tFTeam2.gridy = 1;
+		pTeam2.add(tFTeam2, gbc_tFTeam2);
+		
+		GridBagConstraints gbc_bAnyadirTeam2 = new GridBagConstraints();
+		gbc_bAnyadirTeam2.insets = new Insets(5, 5, 5, 5);
+		gbc_bAnyadirTeam2.gridy = 2;
+		pTeam2.add(bAnyadirTeam2, gbc_bAnyadirTeam2);
+		
+		GridBagConstraints gbc_bEliminarTeam2 = new GridBagConstraints();
+		gbc_bEliminarTeam2.insets = new Insets(5, 5, 5, 5);
+		gbc_bEliminarTeam2.gridy = 2;
+		gbc_bEliminarTeam2.gridx = 1;
+		pTeam2.add(bEliminarTeam2, gbc_bEliminarTeam2);
 	}
 }
