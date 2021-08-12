@@ -22,6 +22,7 @@ public class FirstWindow extends JFrame{
 	private JPanel pTeam1;
 	private JPanel pTeam2;
 	private JPanel pGame;
+	private JPanel pBottomPreGame;
 	
 	//pTeam1 - Objetos
 	private ArrayList <JTextField> lstTeam1;
@@ -34,6 +35,9 @@ public class FirstWindow extends JFrame{
 	private JTextField tFTeam2;
 	private JButton bAnyadirTeam2;
 	private JButton bEliminarTeam2;
+	
+	//pBottomPreGame
+	private JButton startPlay;
 	
 	// Variables de control:
 	private int turno;
@@ -55,6 +59,7 @@ public class FirstWindow extends JFrame{
 		pFondoIntro.add(pTeam1, BorderLayout.WEST);
 		setEquipo2();
 		pFondoIntro.add(pTeam2, BorderLayout.EAST);
+		setBottomPanel();
 	}
 
 	private void setEquipo1() {
@@ -173,5 +178,23 @@ public class FirstWindow extends JFrame{
 		gbc_bEliminarTeam2.gridy = 2;
 		gbc_bEliminarTeam2.gridx = 1;
 		pTeam2.add(bEliminarTeam2, gbc_bEliminarTeam2);
+	}
+	
+	private void setBottomPanel() {
+		BorderLayout bLpBottom = new BorderLayout();
+		pBottomPreGame = new JPanel();
+		pBottomPreGame.setLayout(bLpBottom);
+		
+		startPlay = new JButton("Empezar el juego");
+		startPlay.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TO-DO
+				// Programa el comienzo de la partida
+				
+			}
+			
+		});
+		
 	}
 }
